@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+:root{
+    --bg-color: #1a1a1d;
+    --c1: #4e4e50;
+    --c2: #6f2232;
+    --c3: #950740;
+    --c4: #c3073f;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+body{
+    background-color: var(--bg-color);
+    height: 100vh;
+}
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg-color);
+    transition: 1s;
+}
+.header{
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+h1, h4{
+    text-align: center;
+    color: var(--c4);
+}
+h1{
+    font-size: 2.2em;
+    text-shadow: var(--c3) 3px 3px 10px;
+    animation-name: shine;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    
+}
+.logo{
+    height: 30vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5vh;
+}
+.logo img{
+    width: 30%;
+    animation-name: grow;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+.menu{
+    position: fixed;
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    background-color: var(--c4);
+    transition: 1s;
+    overflow: hidden;
+}
+
+.menu a{
+    text-decoration: none;
+    color: var(--bg-color);
+    padding: 20px;
+    font-weight: 700;
+    overflow: hidden;
+}
+.menu a:hover{
+    background-color: var(--c3)
+}
+.menu-btn{
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    bottom: 5vh;
+    right: 5vh;
+    border: 1px solid var(--c1);
+    box-shadow: var(--c1) 5px 5px 5px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--bg-color);
+    z-index: 2;
+}
+.menu-btn img{
+    width: 70%;
+}
+.hide{
+    width: 0%;
+}
+.inactive{
+    opacity: .3;
+}
+@keyframes shine{
+    0%{
+        text-shadow: var(--c3)3px 3px 10px;
+    }
+    50%{
+        text-shadow: var(--c4) 6px 6px 20px;
+    }
+    100%{
+        text-shadow: var(--c3)3px 3px 10px;
+    }
+}
+
+@keyframes grow{
+    0%{
+        width: 30%;
+    }
+    50%{
+        width: 40%;
+    }
+    100%{
+        width: 30%;
+    }
+}
